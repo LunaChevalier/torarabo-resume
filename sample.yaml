@@ -1,0 +1,89 @@
+# 名前等
+name_kana: る        な                  ち      ぇ        ば       り       ー
+name: ルナ・チェバリー
+birthday: 
+  year: 2000
+  month: 4
+  day: 17
+gender: 男
+email: luna.chevalier@example.com
+twitter: Luna_Chevalier
+photo: photo.jpg
+
+# 住所
+address_kana: 現住所ふりがな
+address: 
+  - 〇〇県××市△△区□□1-1-1萌ビル
+  - 120階 19号
+tel: 090-1234-5678
+is_cellphone: true
+# 連絡先
+address_kana2: 現住所ふりがな2
+address2: 
+  - 〇〇県××市△△区□□1-1-1萌ビル2
+  - 120階 29号
+tel2: 090-9876-5432
+
+# 学歴
+education:
+  - 
+    year: 1990
+    month: 4
+    value: 浦の星女学院 入学
+  - 
+    year: 1993
+    month: 3
+    value: 同 卒業
+
+#職歴
+experience:
+  - 
+    year: 1993
+    month: 4
+    value: 虹ヶ咲学園 赴任
+  - 
+    year: 2019
+    month: 7
+    value: 虹ヶ咲学園 退任
+  - 
+    year: 2019
+    month: 8
+    value: 結ヶ丘女子高等学校 赴任
+finish_value: 以上
+
+#志望動機
+motivation:
+  - ラブライバーだからです。
+  - やりたいからです。
+  - ネタが尽きました。
+  - これが最後ですw。
+
+#自己PR
+self_pr:
+  - にっこにっこにー
+  - あなたのハートににこにこにー
+  - 笑顔届ける矢澤にこにこー
+  - にこにーって覚えてラブにこ
+
+#扶養家族数(配偶者を除く)
+dependents: 0
+
+#配偶者の有無
+spouse: 無
+
+#配偶者の扶養義務
+supporting_spouse: 無
+
+#通勤時間
+commuting_time: 徒歩10分
+
+# 本人希望記入欄
+request:
+  - この履歴書に使われているフォントの名前を教えて下さい。
+  - リモートワークを見越して自宅環境整えたのに、
+  - リモートワークをしたことがありませんw
+  - 
+  - エブリデイ♪
+  - ヤングライフ♪
+  - ジュネス♪
+  - ↑書いていたときにBGMで流れてきました
