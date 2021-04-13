@@ -1,7 +1,7 @@
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
-from reportlab.lib.pagesizes import A4, landscape
+from PIL import Image
 
 import datetime
 import data
@@ -20,11 +20,16 @@ def set_info(filename):
 
 def print_string(pdf_canvas):
   pdfmetrics.registerFont(UnicodeCIDFont("HeiseiMin-W3"))
+  # フォントの大きさを設定
   small_font_size = 8
   middle_font_size = 14
   big_font_size = 22
-
+  # yamlからデータ取得
   person_data = data.get_data()
+
+  photo = Image.open(person_data['photo'])
+  pdf_canvas.drawInlineImage(photo.resize((get_size_photo(photo))), 450, 247)
+
   pdf_canvas.setFont('HeiseiMin-W3', small_font_size)
   pdf_canvas.drawString(105, 309, person_data['name_kana'])
   pdf_canvas.drawString(100, 212, person_data['address_kana'])
@@ -109,3 +114,13 @@ def get_age(birthday=datetime.date.today):
     if today.day <= birthday.day:
       age -= 1
   return age
+
+def get_size_photo(image):
+  base_width, base_height = (75, 105)
+  ratio_width = image.width / base_width
+  ratio_height = image.height / base_height
+
+  if ratio_width < ratio_height:
+    return int(image.width // ratio_width), int(image.height // ratio_width)
+  else:
+    return int(image.width // ratio_height), int(image.height // ratio_height)
