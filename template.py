@@ -48,9 +48,9 @@ def print_string(pdf_canvas):
   pdf_canvas.drawString(210, 242, str(birthday.day))
   pdf_canvas.drawString(271, 242, str(get_age(birthday)))
   if person_data['gender'] == '男':
-    pdf_canvas.drawString(356, 237, str("〇"))
+    pdf_canvas.drawString(356, 237, "〇")
   else:
-    pdf_canvas.drawString(381, 237, str("〇"))
+    pdf_canvas.drawString(381, 237, "〇")
   pdf_canvas.drawString(100, 189, person_data['address'][0] or '')
   pdf_canvas.drawString(100, 173, person_data['address'][1] or '')
   pdf_canvas.drawString(100, 115, person_data['address2'][0] or '')
@@ -67,13 +67,13 @@ def print_string(pdf_canvas):
   pdf_canvas.drawString(660, 334, person_data['self_pr'][3] or '')
   pdf_canvas.drawString(694, 290, str(person_data['dependents']))
   if person_data['spouse'] == '有':
-    pdf_canvas.drawString(772, 288, str("〇"))
+    pdf_canvas.drawString(772, 288, "〇")
   else:
-    pdf_canvas.drawString(804, 288, str("〇"))
+    pdf_canvas.drawString(804, 288, "〇")
   if person_data['supporting_spouse'] == '有':
-    pdf_canvas.drawString(870, 288, str("〇"))
+    pdf_canvas.drawString(870, 288, "〇")
   else:
-    pdf_canvas.drawString(902, 288, str("〇"))
+    pdf_canvas.drawString(902, 288, "〇")
   pdf_canvas.drawString(955, 293, person_data['commuting_time'])
   pdf_canvas.drawString(660, 232, person_data['request'][0] or '')
   pdf_canvas.drawString(660, 214, person_data['request'][1] or '')
@@ -87,9 +87,9 @@ def print_string(pdf_canvas):
   pdf_canvas.setFont('HeiseiMin-W3', big_font_size)
   pdf_canvas.drawString(100, 277, person_data['name'])
   if person_data['is_cellphone']:
-    pdf_canvas.drawString(517, 167, str("〇"))
+    pdf_canvas.drawString(517, 167, "〇")
   else:
-    pdf_canvas.drawString(498, 167, str("〇"))
+    pdf_canvas.drawString(498, 167, "〇")
   writing_height = 720
   delta_height = 30
   for ed in person_data['education']:
